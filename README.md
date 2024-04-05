@@ -37,19 +37,63 @@ Diff = A ⊕ B ⊕ Bin
 Borrow out = A'Bin + A'B + BBin
 
 **Truthtable**
+Full ADDer:
+![4add truth](https://github.com/Infanciafelcy/FULL_ADDER_SUBTRACTOR/assets/155411010/2e1ab924-de83-49b7-887d-bc4013371c0c)
+Full Subractor:
+![4sub trut](https://github.com/Infanciafelcy/FULL_ADDER_SUBTRACTOR/assets/155411010/72faf9ad-1d6a-4dc1-aa68-df91b3aa0170)
+
+
 
 **Procedure**
+```
+)Create a New Project:
 
-Write the detailed procedure here
+*Open Quartus and create a new project by selecting "File" > "New Project Wizard." *Follow the wizard's instructions to set up your project, including specifying the project name, location, and target device (FPGA). 2)Create a New Design File:
 
+*Once the project is created, right-click on the project name in the Project Navigator and select "Add New File." *Choose "Verilog HDL File" or "VHDL File," depending on your chosen hardware description language. 3)Write the Combinational Logic Code:
+
+*Open the newly created Verilog or VHDL file and write the code for your combinational logic. 4)Compile the Project:
+
+*To compile the project, click on "Processing" > "Start Compilation" in the menu. *Quartus will analyze your code, synthesize it into a netlist, and perform optimizations based on your target FPGA device. 5)Analyze and Fix Errors:
+
+*If there are any errors or warnings during the compilation process, Quartus will display them in the Messages window. *Review and fix any issues in your code if necessary. *View the RTL diagram. 6)Verification:
+
+*Click on "File" > "New" > "Verification/Debugging Files" > "University Program VWF". *Once Waveform is created Right Click on the Input/Output Panel > " Insert Node or Bus" > Click on Node Finder > Click On "List" > Select All. *Give the Input Combinations according to the Truth Table and then simulate the Output Waveform.
+```
 **Program:**
 
-/* Program to design a half subtractor and full subtractor circuit and verify its truth table in quartus using Verilog programming. Developed by: RegisterNumber:
+```
+/* Program to design a half subtractor and full subtractor circuit and verify its truth table in quartus using Verilog programming.
+Developed by: INfancia Felcy P
+RegisterNumber:21223040067
 */
+module exp4(a,b,c,sum,carry);
+input a,b,c;
+output sum,carry;
+xor(sum,a,b,c);
+assign carry=a&b | b&c | a&c;
+endmodule
 
+module exp4(diff,carry,a,b,c);
+input a,b,c;
+output diff,carry;
+xor(diff,a,b,c);
+assign carry= (~a)&c | (~a)&b | (b&c);
+endmodule
+```
 **RTL Schematic**
+Full Adder
+![4add dia](https://github.com/Infanciafelcy/FULL_ADDER_SUBTRA![4 sub dia](https://github.com/Infanciafelcy/FULL_ADDER_SUBTRACTOR/assets/155411010/59d072ba-e009-4992-958a-24c243a96927)
+Full subractor
+![4 sub dia](https://github.com/Infanciafelcy/FULL_ADDER_SUBTRACTOR/assets/155411010/79b0a5b8-2a0b-4ca7-85df-7a1c53fdbdcc)
+
 
 **Output Timing Waveform**
+Full adder:
+![4add wave](https://github.com/Infanciafelcy/FULL_ADDER_SUBTRACTOR/assets/155411010/dd29686c-834c-4369-8932-4d00c51f757d)
+Full subractor:
+![4 sub wave](https://github.com/Infanciafelcy/FULL_ADDER_SUBTRACTOR/assets/155411010/5f946a58-af6e-4367-8435-154eb8704d51)
+
 
 **Result:**
 
