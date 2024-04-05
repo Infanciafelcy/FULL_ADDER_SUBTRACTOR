@@ -83,7 +83,8 @@ endmodule
 ```
 **RTL Schematic**
 Full Adder
-![4add dia](https://github.com/Infanciafelcy/FULL_ADDER_SUBTRA![4 sub dia](https://github.com/Infanciafelcy/FULL_ADDER_SUBTRACTOR/assets/155411010/59d072ba-e009-4992-958a-24c243a96927)
+![4add dia](https://github.com/Infanciafelcy/FULL_ADDER_SUBTRACTOR/assets/155411010/d44ced81-eb0f-4765-8938-5ab6b9704d5e)
+
 Full subractor
 ![4 sub dia](https://github.com/Infanciafelcy/FULL_ADDER_SUBTRACTOR/assets/155411010/79b0a5b8-2a0b-4ca7-85df-7a1c53fdbdcc)
 
